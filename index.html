@@ -1,0 +1,299 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un pequeño mundo para ti🌸</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-flower">🌸</div>
+    <h1>Un pequeño mundo para ti</h1>
+    <p>Preparando la aventura...</p>
+  </div>
+
+  <div id="intro">
+    <div class="intro-content">
+      <div class="intro-flower">🌸</div>
+      <p class="eyebrow">UNA AVENTURA HECHA ESPECIALMENTE PARA TI</p>
+      <h1>Bienvenida a tu<br><span>pequeño rincón</span> 🌸</h1>
+      <p class="intro-text">Un jardín de lirios, una pequeña isla y un lugar donde serás un pibble feliz.</p>
+      <button id="startBtn" class="glow-btn">Comenzar aventura ✨</button>
+      <p class="hint">Puedes mover la cámara con el mouse</p>
+    </div>
+  </div>
+
+  <canvas id="scene"></canvas>
+
+  <header id="navbar">
+    <div class="brand">🌸 Mi pequeño mundo</div>
+    <nav>
+      <button id="musicBtn" type="button" aria-label="Pausar o reproducir música">🎵 <span id="musicBtnLabel">Música</span></button>
+      <button data-target="home">Inicio</button>
+      <button data-target="flowers">Lirios 🌸</button>
+      <button data-target="crew">One Piece 🏴‍☠️</button>
+      <button data-target="photos">Constelación de fotos ✨</button>
+      <button data-target="letter">Para ti 💌</button>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section id="home" class="panel active">
+      <div class="glass hero-card">
+        <p class="eyebrow">ISLA ROSA</p>
+        <h2>Bienvenida a tu pequeño rincón 🌸</h2>
+        <p>Este lugar fue creado para guardar flores, aventuras y un mensaje especial para ti.</p>
+        <div class="button-row">
+          <button class="pink-btn" data-target="flowers">Explorar los lirios</button>
+          <button class="ghost-btn" data-target="letter">Ver la carta 💌</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="flowers" class="panel">
+      <div class="glass section-card">
+        <p class="eyebrow">JARDÍN DE LIRIOS</p>
+        <h2>Pequeñas flores, grandes detalles 🌷</h2>
+        <p class="section-intro">Presiona cada lirio para abrir una pequeña carta. 🌸</p>
+        <div class="flower-grid">
+          <article class="flower-card accordion-card flower-accordion">
+            <button class="expand-toggle" type="button" aria-expanded="false">
+              <div class="flower-icon pink">🌸</div>
+              <div><h3>Lirio rosa</h3><p>Ternura y dulzura.</p></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="flower-details">
+              <div class="mini-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>Para el lirio rosa 🌸</h3>
+                <p>Eres una persona especial. Todos los días me encanta verte de ese color. Te quiero mucho, pibblepapita. 💗</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flower-card accordion-card flower-accordion">
+            <button class="expand-toggle" type="button" aria-expanded="false">
+              <div class="flower-icon white">🤍</div>
+              <div><h3>Lirio blanco</h3><p>Tranquilidad y paz.</p></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="flower-details">
+              <div class="mini-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>Para el lirio blanco 🤍</h3>
+                <p>Ojalá este pequeño rincón siempre te recuerde que también mereces días tranquilos. Sé tú misma: eres linda siendo tú, papita. 💘</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="flower-card accordion-card flower-accordion">
+            <button class="expand-toggle" type="button" aria-expanded="false">
+              <div class="flower-icon purple">💜</div>
+              <div><h3>Lirio morado</h3><p>Cariño y afecto.</p></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="flower-details">
+              <div class="mini-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>Para el lirio morado 💜</h3>
+                <p>Este mundo se sentirá más suave con el cariño que tienes. Eres muy amable y eso te hace una gran persona, papita. No cambies. I pibble you. ❤️‍🩹</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="crew" class="panel">
+      <div class="glass section-card wide crew-section">
+        <p class="eyebrow">Tú eres la capitana de este mundo.</p>
+        <h2>Tripulación favorita 🏴‍☠️</h2>
+        <p class="section-intro">Presiona cualquiera de los personajes para abrir su espacio y leer una pequeña carta especial. 💌</p>
+
+        <div class="crew-grid">
+          <article class="crew-card accordion-card">
+            <button class="crew-toggle" type="button" aria-expanded="false">
+              <div class="avatar"><img src="img/luffy.png" alt="Luffy"></div>
+              <div class="crew-title"><h3>Luffy</h3><span>Capitán con un gran sueño y un corazón enorme.</span></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="crew-details">
+              <img class="character-image" src="img/luffy.png" alt="Luffy">
+              <div class="mini-letter character-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>De Luffy 🏴‍☠️</h3>
+                <p>Es el personaje principal de una historia, y tú serás la protagonista de este mundo. Lograrás grandes cosas siendo tú misma. ¡TKIEROOOOOO! 🩷</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="crew-card accordion-card">
+            <button class="crew-toggle" type="button" aria-expanded="false">
+              <div class="avatar"><img src="img/zoro.png" alt="Zoro"></div>
+              <div class="crew-title"><h3>Zoro</h3><span>Espadachín decidido que nunca abandona su objetivo.</span></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="crew-details">
+              <img class="character-image" src="img/zoro.png" alt="Zoro">
+              <div class="mini-letter character-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>De Zoro ⚔️</h3>
+                <p>La verdad no sé qué poner, pero muy bien: eres muy fuerte y valiente como Zoro. Espero que sigas así y cumplas muchas cosas. <3</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="crew-card accordion-card">
+            <button class="crew-toggle" type="button" aria-expanded="false">
+              <div class="avatar"><img src="img/nami.png" alt="Nami"></div>
+              <div class="crew-title"><h3>Nami</h3><span>Navegante brillante que conoce el camino.</span></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="crew-details">
+              <img class="character-image" src="img/nami.png" alt="Nami">
+              <div class="mini-letter character-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>De Nami 🧭</h3>
+                <p>Que siempre encuentres el rumbo hacia los lugares y las personas que te hagan sentir feliz. Eres la brújula que hace que no me pierda. Eres muy linda. 💗</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="crew-card accordion-card">
+            <button class="crew-toggle" type="button" aria-expanded="false">
+              <div class="avatar"><img src="img/sanji.png" alt="Sanji"></div>
+              <div class="crew-title"><h3>Sanji</h3><span>Cocinero elegante y protector de su tripulación.</span></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="crew-details">
+              <img class="character-image" src="img/sanji.png" alt="Sanji">
+              <div class="mini-letter character-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>De Sanji 🍳</h3>
+                <p>Eres la cocinera que siempre ilumina un día malo. Tu corazón también es parte de lo que te hace especial.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="crew-card accordion-card">
+            <button class="crew-toggle" type="button" aria-expanded="false">
+              <div class="avatar"><img src="img/robin.png" alt="Robin"></div>
+              <div class="crew-title"><h3>Robin</h3><span>Inteligente, tranquila y llena de curiosidad.</span></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="crew-details">
+              <img class="character-image" src="img/robin.png" alt="Robin">
+              <div class="mini-letter character-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>De Robin 📚</h3>
+                <p>Siempre conserva esa curiosidad por descubrir cosas nuevas. Recuerda que siempre estaré en los mejores y peores momentos. 🤍</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="crew-card accordion-card">
+            <button class="crew-toggle" type="button" aria-expanded="false">
+              <div class="avatar"><img src="img/chopper.png" alt="Chopper"></div>
+              <div class="crew-title"><h3>Chopper</h3><span>Un pequeño doctor con un gran corazón.</span></div>
+              <span class="accordion-arrow">⌄</span>
+            </button>
+            <div class="crew-details">
+              <img class="character-image" src="img/chopper.png" alt="Chopper">
+              <div class="mini-letter character-letter">
+                <div class="mini-letter-top">💌 Una pequeña carta</div>
+                <h3>De Chopper 🩺</h3>
+                <p>Que nunca olvides lo valioso que es tu gran corazón. A veces, los detalles más pequeños son los que consiguen alegrarle el día a alguien (como a mí ❤️).</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="photos" class="panel">
+      <div class="glass section-card wide photo-section">
+        <p class="eyebrow">NUESTRA CONSTELACIÓN</p>
+        <h2>Constelación de fotos ✨</h2>
+        <p class="section-intro">Un pequeño cielo lleno de recuerdos, momentos y fotos que quiero guardar contigo. 💗</p>
+
+        <div class="photo-grid">
+          <button class="memory-photo" type="button" data-photo="img/foto-inicio.jpeg" data-caption="no sabia que te convertirias en una persona muy espcial 🤍">
+            <img src="img/foto-inicio.jpeg" alt="Foto juntos" loading="lazy">
+            <span>❤️ el inicio</span>
+          </button>
+          <button class="memory-photo photo-large" type="button" data-photo="img/foto-01-free-fire.jpg" data-caption="este dia supe que serias mi persona pibble especial 🎮✨">
+            <img src="img/foto-01-free-fire.jpg" alt="Recuerdo de Free Fire y Jujutsu Kaisen" loading="lazy">
+            <span>🤍 Una aventura</span>
+          </button>
+          <button class="memory-photo" type="button" data-photo="img/foto-02.jpg" data-caption="Un momento juntos que merece quedarse para siempre. 🤍">
+            <img src="img/foto-02.jpg" alt="Foto juntos" loading="lazy">
+            <span>🤍 Un momento</span>
+          </button>
+          <button class="memory-photo" type="button" data-photo="img/foto-03.jpg" data-caption="De esos momentos pequeños, que contigo son grandes 💗">
+            <img src="img/foto-03.jpg" alt="Foto juntos" loading="lazy">
+            <span>💗 Un recuerdo</span>
+          </button>
+          <button class="memory-photo" type="button" data-photo="img/foto-04.jpg" data-caption="solo con la sonrisa de mi pibble se que la foto es perfecta ✨">
+            <img src="img/foto-04.jpg" alt="Dos dedos dibujados con caritas" loading="lazy">
+            <span>✨ Dos pequeñas sonrisas</span>
+          </button>
+          <button class="memory-photo" type="button" data-photo="img/foto-05.jpg" data-caption="Un recuerdo que siempre me va a sacar una sonrisa. 💗">
+            <img src="img/foto-05.jpg" alt="Foto con camisetas de fútbol" loading="lazy">
+            <span>⚽ Un recuerdo</span>
+          </button>
+          <button class="memory-photo" type="button" data-photo="img/foto-06.jpg" data-caption="otro pedacito de la free señal, por bot perdemos TKMUCHOTEEEEE 🌸">
+            <img src="img/foto-06.jpg" alt="Foto juntos" loading="lazy">
+            <span>🎮 La free señal</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="letter" class="panel">
+      <div class="glass letter-card">
+        <p class="eyebrow">UN MENSAJE PARA TI</p>
+        <h2>Tienes una carta 💌</h2>
+
+        <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Abrir carta">
+          <div class="env-back"></div>
+          <div class="env-letter">
+            <h3>De mí, para ti 🌸</h3>
+            <p>No sé ni cómo empezar, porque la verdad siempre he sido malísimo demostrando lo que siento, pero quiero que sepas que te quiero muchísimo y que, aunque a veces no sepa cómo demostrarlo, de verdad eres alguien muy especial para mí. ❤️</p>
+            <p>Si algún día me necesitas, quiero que sepas que aquí voy a estar para ti, en las buenas, en las malas y en todas esas veces en las que simplemente necesites a alguien. No hemos vivido tantísimas cosas juntos, pero las que hemos vivido las guardo con muchísimo cariño, y sinceramente quiero seguir viviendo un montón de momentos chidos contigo.</p>
+            <p>Gracias por estar, por ser tú y por dejarme compartir un pedacito de tu vida. Te quiero muchísimo, pibbleamiga. Y aunque probablemente nunca sepa decirlo de la mejor manera: TE QUIEROOOOOOO MUCHÍSIMO PIBBLEAMIGA. 💗</p>
+          </div>
+          <div class="env-front"></div>
+          <div class="seal">💗</div>
+        </div>
+        <p class="letter-hint">Haz clic en el sobre para abrir la carta</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="map" class="map-widget glass">
+    <span>🗺️</span>
+    <button data-target="flowers">🌸 Isla de los Lirios</button>
+    <span>→</span>
+    <button data-target="crew">🏴‍☠️ Grand Line</button>
+    <span>→</span>
+    <button data-target="photos">✨ Fotos</button>
+    <span>→</span>
+    <button data-target="letter">💗 Isla Rosa</button>
+  </div>
+
+  <div id="counter" class="glass">✨ Aventuras: <strong id="adventureCount">0</strong></div>
+  <div id="toast"></div>
+
+  <audio id="bgMusic" preload="auto" autoplay playsinline></audio>
+  <div id="photoLightbox" class="photo-lightbox" aria-hidden="true">
+    <button id="closePhoto" class="photo-close" type="button" aria-label="Cerrar foto">×</button>
+    <img id="lightboxImage" src="" alt="Foto ampliada">
+    <p id="lightboxCaption"></p>
+  </div>
+  <div id="musicNow" class="music-now" aria-live="polite"><span class="music-dot">♪</span><span>Reproduciendo: <strong id="musicTrack">Reina Pepiada</strong></span></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
